@@ -18,6 +18,10 @@ class App extends React.Component {
       .then((users) => this.setState({ monstsers: users }));
   };
 
+  handelChange = (e) => {
+    this.setState({ serchField: e.target.value });
+  };
+
   render() {
     const monstersFilter = this.state.monstsers.filter((monster) => {
       return monster.name
@@ -27,12 +31,8 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Search
-          plachoder="Monster Name"
-          handelChange={(e) => {
-            this.setState({ serchField: e.target.value });
-          }}
-        />
+        <h1 className="header">Monsters Roledex</h1>
+        <Search plachoder="Monster Name" handelChange={this.handelChange} />
         <CardList monstsers={monstersFilter} />
       </div>
     );
