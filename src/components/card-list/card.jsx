@@ -5,7 +5,7 @@ const Card = ({ monster }) => {
     <div className="col-lg-3 col-md-4  col-sm-6 col-xs-12  text-center ">
       <div
         className="card   mt-3 mx-auto"
-        style={{ width: "200px", height: "350px" }}
+        style={{ width: "200px", height: "310px" }}
       >
         <img
           src={`https://robohash.org/${monster.id}?set=set2&size=180x180`}
