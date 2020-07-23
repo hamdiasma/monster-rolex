@@ -1,3 +1,9 @@
-/* .card{
-margin: auto;
-} */
+.card {
+  background-color: #009688 !important;
+  cursor: pointer;
+  transition: .5s;
+}
+.card:hover{
+  transform: scale(1.07);
+  box-shadow: 0 5px 5px #777;
+}

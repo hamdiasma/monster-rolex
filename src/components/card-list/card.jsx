@@ -5,11 +5,19 @@ const Card = ({ monster }) => {
     <div className="col-lg-3 col-md-4  col-sm-6 col-xs-12  text-center ">
       <div
         className="card   mt-3 mx-auto"
-        style={{ width: "200px", height: "300px" }}
+        style={{ width: "200px", height: "350px" }}
       >
-        <img src="..." className="card-img-top" alt="..." />
+        <img
+          src={`https://robohash.org/${monster.id}?set=set2&size=180x180`}
+          className="card-img-top"
+          alt="..."
+        />
         <div className="card-body">
-          <p className="card-text">{monster.name}</p>
+          <p className="card-text">
+            {" "}
+            <strong>{monster.name}</strong>
+          </p>
+          <p>{monster.website}</p>
         </div>
       </div>
     </div>
